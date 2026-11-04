@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvaraj T S | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #172033;
+            --muted: #58647a;
+            --accent: #4f46e5;
+            --accent-strong: #2563eb;
+        }
+
+        body {
+            background:
+                radial-gradient(ellipse at 82% 10%, rgba(96, 165, 250, .18), transparent 34rem),
+                radial-gradient(ellipse at 8% 55%, rgba(167, 139, 250, .14), transparent 32rem),
+                linear-gradient(145deg, #ffffff 0%, #f7f9ff 52%, #f2f5fb 100%);
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+            background-attachment: fixed;
+        }
+
+        /* Rich, cool glass surfaces with enough contrast against the background. */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, .94), rgba(248, 250, 255, .88));
+            backdrop-filter: blur(20px) saturate(135%);
+            -webkit-backdrop-filter: blur(20px) saturate(135%);
+            border: 1px solid rgba(148, 163, 184, .2);
+            box-shadow: 0 22px 60px rgba(38, 56, 92, .10), inset 0 1px rgba(255, 255, 255, .95);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, .82);
+            backdrop-filter: blur(24px) saturate(135%);
+            -webkit-backdrop-filter: blur(24px) saturate(135%);
+            border: 1px solid rgba(148, 163, 184, .2);
+            box-shadow: 0 14px 40px rgba(38, 56, 92, .12);
+        }
+
+        section:not(#hero) { padding-top: 7rem; padding-bottom: 7rem; }
+        h1, h2, h3 { color: #172033; }
+        h2 span { background: linear-gradient(90deg, var(--accent-strong), #818cf8) !important; }
+        a { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
+        nav a:hover, footer { color: var(--accent); }
+        .text-black { color: var(--ink) !important; }
+        .text-black\/85, .text-black\/80 { color: #34415a !important; }
+        .bg-black { background: linear-gradient(135deg, #2563eb, #7c3aed) !important; color: #fff !important; }
+        .bg-black\/5 { background: rgba(79, 70, 229, .07) !important; }
+        .border-black\/5, .border-black\/15, .border-black\/80 { border-color: rgba(100, 116, 139, .22) !important; }
+        .bg-white\/40, .bg-white\/60 { background: rgba(255, 255, 255, .72) !important; }
+        .text-black\/60 { color: var(--muted) !important; }
+        #hero h1 { text-shadow: 0 8px 40px rgba(79, 70, 229, .12); }
+        #hero img { filter: drop-shadow(0 28px 36px rgba(49, 66, 102, .24)); }
+        #about .glass-card { color: #34415a; }
+        .glass-card:hover { border-color: rgba(99, 102, 241, .35); }
+
+        @media (max-width: 767px) {
+            section:not(#hero) { padding-top: 5rem; padding-bottom: 5rem; }
+            #hero { padding-top: 9rem; padding-bottom: 7rem; }
+            nav { width: 94% !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+        }
+
+        /* Smooth page scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Float animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav
+        class="glass-nav fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 px-8 py-3.5 rounded-2xl transition-all duration-300 flex justify-between items-center shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center w-full">
+            <a href="#hero" class="text-xl font-bold tracking-tight hover:opacity-70 transition-opacity">YUVARAJ T S</a>
+            <div class="space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#hero" class="hover:opacity-60 transition-opacity">Home</a>
+                <a href="#about" class="hover:opacity-60 transition-opacity">About Me</a>
+                <a href="#skills" class="hover:opacity-60 transition-opacity">Features</a>
+                <a href="#projects" class="hover:opacity-60 transition-opacity">Blog</a>
+                <a href="#contact" class="hover:opacity-60 transition-opacity">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="min-h-screen flex items-center justify-center pt-32 pb-16 px-6 relative max-w-6xl mx-auto w-full">
+            <div class="w-full md:flex md:items-center md:justify-between gap-16 text-center md:text-left">
+            <!-- Text Content -->
+            <div class="space-y-6 max-w-xl flex-1">
+                <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-none text-black">
+                    YUVARAJ T S
+                </h1>
+                <p class="text-xl md:text-2xl font-semibold tracking-tight text-black/85">
+                    AI & ML student <span class="mx-2 opacity-35 font-light">|</span> Software Engineer
+                </p>
+
+                <div class="pt-2">
+                    <span
+                        class="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase border border-black/15 rounded-full bg-white/40 shadow-sm text-black/80">
+                        Available for Opportunities
+                    </span>
+                </div>
+                <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#projects"
+                        class="px-8 py-3.5 bg-black text-white rounded-xl font-bold text-sm shadow-md hover:bg-black/90 transition-all duration-300">
+                        View Projects
+                    </a>
+                    <a href="https://www.linkedin.com/in/yuvaraj-t-s-919896384/" target="_blank"
+                        class="px-8 py-3.5 bg-white/40 border border-black/80 rounded-xl font-bold text-sm flex items-center gap-2 shadow-sm hover:bg-white/80 transition-all duration-300">
+                        LinkedIn <i class="fab fa-linkedin text-base text-black"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Decorative 3D Sphere Graphic -->
+            <div class="hidden md:block w-[550px] lg:w-[500px] shrink-0 relative animate-float">
+                <img src="hero_shape.png" alt="3D Glassmorphic Sphere" class="w-full h-auto object-contain">
+            </div>
+        </div>
+
+
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <a href="#about" aria-label="Scroll to About Section">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold tracking-tight mb-12 relative inline-block">
+            About Me
+            <span class="absolute bottom-[-8px] left-0 w-12 h-[3px] bg-black"></span>
+        </h2>
+        <div class="glass-card p-8 md:p-10 rounded-3xl space-y-6 text-base leading-relaxed opacity-80">
+            <p>
+                As an Artificial Intelligence and Machine Learning student, I anchor my development ethos in combining
+                foundational software engineering mechanics with smart systems. I enjoy stripping complex real-world
+                logic down into efficient, clean program architectures.
+            </p>
+            <p>
+                Whether designing precise graphics rendering logic or deploying local software systems, I focus heavily
+                on writing performance-driven code from scratch, keeping dependencies minimal, and building smooth
+                interfaces.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold tracking-tight mb-12 relative inline-block">
+            Core Toolkit
+            <span class="absolute bottom-[-8px] left-0 w-12 h-[3px] bg-black"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Programming Languages -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Languages & Web</h3>
+                    <p class="text-sm opacity-60 mb-6">Programming languages and front-end foundations.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">C</span>
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">Python</span>
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">HTML</span>
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">CSS</span>
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Architecture Philosophy -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center mb-6">
+                        <i class="fas fa-cubes text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Frameworks</h3>
+                    <p class="text-sm opacity-60 mb-6">Cross-platform application frameworks.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">Flutter</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center mb-6">
+                        <i class="fas fa-sliders text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Database & Tools</h3>
+                    <p class="text-sm opacity-60 mb-6">Data storage and version control.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">Git</span>
+                    <span
+                        class="px-3 py-1.5 bg-white/60 text-sm font-semibold rounded-lg border border-black/5">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold tracking-tight mb-12 relative inline-block">
+            Featured Projects
+            <span class="absolute bottom-[-8px] left-0 w-12 h-[3px] bg-black"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Project 1: 2D Graphics Editor -->
+            <div
+                class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-black/5 flex items-center justify-center">
+                            <i class="fas fa-bezier-curve text-xl"></i>
+                        </div>
+                        <a href="https://github.com/Yuvaraj-T-S/GraphicsEditor" target="_blank"
+                            class="w-10 h-10 rounded-full hover:bg-black/5 flex items-center justify-center transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-3">2D Graphics Editor</h3>
+                    <p class="text-sm leading-relaxed opacity-70 mb-6">
+                        An environment built to manipulate, render, and interface with vector structural paths and
+                        geometric models accurately.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-black/5">
+                    <span class="text-xs font-bold tracking-wider px-2.5 py-1 bg-black/5 rounded-md uppercase">Core
+                        Logic</span>
+                    <span
+                        class="text-xs font-bold tracking-wider px-2.5 py-1 bg-black/5 rounded-md uppercase">Graphics</span>
+                </div>
+            </div>
+
+            <!-- Project 2: Rock Paper Scissors Game -->
+            <div
+                class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-black/5 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-xl"></i>
+                        </div>
+                        <a href="https://github.com/Yuvaraj-T-S/RPS-GAME" target="_blank"
+                            class="w-10 h-10 rounded-full hover:bg-black/5 flex items-center justify-center transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-3">Rock Paper Scissors Game</h3>
+                    <p class="text-sm leading-relaxed opacity-70 mb-6">
+                        A responsive state-tracking algorithmic structure designed to evaluate real-time user selections
+                        against structured computational randomized loops.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-black/5">
+                    <span
+                        class="text-xs font-bold tracking-wider px-2.5 py-1 bg-black/5 rounded-md uppercase">Algorithms</span>
+                    <span
+                        class="text-xs font-bold tracking-wider px-2.5 py-1 bg-black/5 rounded-md uppercase">Interactive
+                        Logic</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 rounded-3xl space-y-8">
+            <h2 class="text-3xl font-bold tracking-tight">Let's Build Something Meaningful</h2>
+            <p class="text-base opacity-75 max-w-xl mx-auto leading-relaxed">
+                I'm always looking to collaborate on pure-code systems, algorithmic logic pipelines, or intelligent web
+                and mobile designs. Feel free to access my professional network below.
+            </p>
+            <div class="flex justify-center gap-6 pt-4">
+                <a href="https://www.linkedin.com/in/yuvaraj-t-s-919896384/" target="_blank"
+                    class="w-14 h-14 rounded-2xl glass-card flex items-center justify-center text-xl hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-110">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Yuvaraj-T-S" target="_blank"
+                    class="w-14 h-14 rounded-2xl glass-card flex items-center justify-center text-xl hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-110">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs tracking-widest opacity-40 uppercase font-medium">
+        &copy; 2026 Yuvaraj T S
+    </footer>
+
+</body>
+
+</html>
